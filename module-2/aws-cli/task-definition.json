@@ -6,12 +6,12 @@
   "requiresCompatibilities": [
     "FARGATE"
   ],
-  "executionRoleArn": "REPLACE_ME_ECS_SERVICE_ROLE_ARN",
-  "taskRoleArn": "REPLACE_ME_ECS_TASK_ROLE_ARN",
+  "executionRoleArn": "arn:aws:iam::815015007739:role/MythicalMysfitsCoreStack-EcsServiceRole-1K2YLB7CZXEF9",
+  "taskRoleArn": "arn:aws:iam::815015007739:role/MythicalMysfitsCoreStack-ECSTaskRole-4RE04WFZALFN",
   "containerDefinitions": [
     {
       "name": "MythicalMysfits-Service",
-      "image": "REPLACE_ME_IMAGE_TAG_USED_IN_ECR_PUSH",
+      "image": "815015007739.dkr.ecr.eu-west-1.amazonaws.com/mythicalmysfits/service:latest",
       "portMappings": [
         {
           "containerPort": 8080,
@@ -22,7 +22,7 @@
         "logDriver": "awslogs",
         "options": {
           "awslogs-group": "mythicalmysfits-logs",
-          "awslogs-region": "REPLACE_ME_REGION",
+          "awslogs-region": "eu-west-1",
           "awslogs-stream-prefix": "awslogs-mythicalmysfits-service"
         }
       },
